@@ -1,0 +1,71 @@
+@import "../mixinAndFonts";
+
+.general {
+    @include bg-tabs;
+    font: {
+        size: 1.5em;
+        family: BandFont,serif;
+        weight: 700;
+    }
+    .overview {
+        height: auto;
+        text-align: left;
+        padding: 30px 20px;
+        color: white;
+        font-weight: 300;
+        width: 80%;
+        margin: 0 auto;
+        h1 {
+            text-align: center;
+        }
+        h3 {
+            font-weight: 200;
+            margin-top: 30px;
+            line-height: 1.3;
+        }
+    }
+    ul {
+        padding: 10px;
+        text-align: center;
+        li {
+            margin: 20px 20px;
+            display: inline-block;
+            width: 40%;
+            height: auto;
+            background-color: #dcdcdc;
+            padding: 2%;
+            @include border-radius(15px);
+            img {
+                width: 40%;
+                height: auto;
+                margin-bottom: -4px;
+            }
+            div {
+                width: 60%;
+                height: 100%;
+                float: right;
+                text-align: center;
+                padding-top: 20px;
+                h3 {
+                    margin-top: 20%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 840px) {
+    .general {
+        ul {
+            li {
+                width: 85%;
+            }
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .general {
+        font-size: 1.1em;
+    }
+}

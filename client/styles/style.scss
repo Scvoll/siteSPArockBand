@@ -1,0 +1,162 @@
+@import './resetCSS', 'tabsStyles/general', 'tabsStyles/songs',
+'tabsStyles/video', 'tabsStyles/sale', 'mixinAndFonts', 'tabsStyles/contacts';
+
+@include font-mix;
+body {
+    width: 100%;
+    background-color: #3B3B3B;
+}
+
+.header {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    .images {
+        font-size: 0;
+    }
+    img {
+        width: 100%;
+        height: auto;
+
+    }
+    .banner867 {
+        display: none;
+    }
+
+    .imageMenu {
+        border-top: 1px solid #2f312e;
+        height: 41px;
+
+    }
+    .burgerMenu {
+        display: none;
+        position: absolute;
+        font-size: 3em;
+        right: 5px;
+        text-align: right;
+        padding-top: 5px;
+        color: #ffffff;
+        z-index: 5;
+        cursor: pointer;
+    }
+
+    .openMenu {
+        display: none;
+        position: absolute;
+        background-image: url("../static/images/background.jpg");
+        width: 100%;
+        height: 300px;
+        border-bottom: 2px solid #818181;
+        z-index: 3;
+        ul {
+            line-height: 2.3em;
+            width: 100%;
+            font-size: 1.4em;
+            li {
+                display: block;
+            }
+        }
+    }
+
+    ul {
+        position: absolute;
+        width: 100%;
+        bottom: 3.4%;
+        line-height: 100%;
+        li {
+            display: inline-block;
+            margin: 0 3% 0 3%;
+            font-family: "BandFont", serif;
+            font-size: 1.3em;
+
+            a {
+                text-decoration: none;
+                color: #fefefe;
+                &:hover {
+                    color: #b44348;
+                }
+            }
+        }
+    }
+
+}
+
+.footer {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0;
+    border-top: 1px solid #2f312e;
+    img {
+        width: 100%;
+        height: 65px;
+    }
+    ul {
+
+        position: absolute;
+        top: 12px;
+        padding-left: 20px;
+        li {
+            display: inline-block;
+            margin: 0 5px 0 5px;
+            img {
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+    h2 {
+        position: absolute;
+        font-size: medium;
+        color: white;
+        right: 20px;
+        top: 45%;
+        a {
+            color: white;
+            text-decoration: none;
+            &:hover {
+                color: #b44348;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 840px ) {
+    .header {
+        ul {
+            bottom: 4.5%;
+        }
+        li {
+            font-size: 1.5em;
+        }
+    }
+}
+
+@media (max-width: 667px ) {
+    .header {
+        ul.menu, .imageMenu {
+            display: none;
+        }
+        .burgerMenu {
+            display: block;
+        }
+        .banner {
+            display: none;
+        }
+        .banner867 {
+            display: block;
+        }
+    }
+
+    .general, .contacts, .sale, .songs, .video {
+        padding-top: 40px;
+    }
+}
+
+@media (max-width: 472px) {
+    h2 {
+        display: none;
+    }
+}

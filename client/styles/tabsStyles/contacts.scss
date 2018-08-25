@@ -1,0 +1,49 @@
+@import "../mixinAndFonts";
+
+.contacts {
+    @include bg-tabs;
+    color: #ffffff;
+    font-size: 1.2em;
+    text-align: left;
+    div{
+        padding: 40px 30px 30px 3%;
+        line-height: 1.4;
+        span:hover {
+            text-decoration: underline #ff7b80;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #92afff;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+
+    }
+
+    .social {
+        width: 100%;
+        height: auto;
+        #vk_group {
+            display: inline-block;
+            margin-left: 20px;
+        }
+        .instagram {
+            display: inline-block;
+            overflow: hidden;
+            width: 250px;
+            height: 375px;
+        }
+    }
+}
+
+@media (max-width: 505px) {
+    .social {
+        text-align: center;
+    }
+}

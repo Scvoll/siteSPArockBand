@@ -1,0 +1,14 @@
+@import "../mixinAndFonts";
+
+.songs {
+    @include bg-tabs;
+    padding: 20px 0;
+    min-height: 700px;
+    .playlists {
+        width: 80%;
+        margin: auto;
+        #playlist_1, #playlist_2, #playlist_3 {
+            margin: 10px 0;
+        }
+    }
+}

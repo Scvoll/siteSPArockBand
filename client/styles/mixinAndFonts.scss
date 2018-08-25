@@ -1,0 +1,22 @@
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin font-mix {
+    @font-face {
+        font-family: "BandFont";
+        src: url("../static/fonts/fontOfBand.ttf") format("truetype");
+        src: url("../static/fonts/fontOfBand.woff") format("woff");
+    }
+}
+
+@mixin bg-tabs {
+    background-image: url("../static/images/background.jpg");
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-top: 1px solid #2f312e;
+}
