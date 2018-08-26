@@ -1,4 +1,4 @@
-# SPA for Rock Band with Adaptive Layout
+# SPA for Rock Band with Responsive Layout
 #### Site : https://kvartetdostoevskogo.herokuapp.com 
 
 
