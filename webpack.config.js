@@ -14,6 +14,7 @@ module.exports = {
         open: true,
 
     },
+    mode: "production",
     module: {
         rules: [
             {
@@ -29,7 +30,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                     MiniCssExtractPlugin.loader,
+                    process.env.NODE_ENV === 'production' ? MiniCssExtractPlugin.loader : "style-loader",
                     'css-loader',
                     'sass-loader',
                 ],
@@ -53,7 +54,7 @@ module.exports = {
         new HtmlWebPackPlugin({
             inject: true,
             template: './client/index.html',
-            favicon: 'build/favicon.ico'
+            favicon: './client/favicon.ico'
         })
     ]
 };

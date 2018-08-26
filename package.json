@@ -7,10 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --hot --inline --mode development"
+    "devserver": "webpack-dev-server --hot --inline --mode development",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
+  "engines": {
+    "npm": "5.6.0",
+    "node": "8.11.3"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",

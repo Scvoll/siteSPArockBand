@@ -12,4 +12,4 @@ app.get('/get_rider', (req,res) => {
     res.download('./filesForUsers/kvartet-rider.txt', 'КиД-техрайдер.txt');
 });
 
-app.listen(3000, () => console.log('listening port 3000'));
+app.listen(process.env.PORT || 3000, () => console.log('listening port ' + (process.env.PORT || 3000)));

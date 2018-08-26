@@ -11,6 +11,7 @@ export class Header extends React.Component {
         super(props);
         this.state = {
             openMenuActive: false,
+            screenWidth: document.body.clientWidth
         };
         this.selfRef = React.createRef();
         this.handleClick = this.handleClick.bind(this);
@@ -26,18 +27,20 @@ export class Header extends React.Component {
     }
 
     closeMenuWhenResize () {
-        this.selfRef.current.style.display = 'none';
-        this.setState({openMenuActive: false});
+        if (this.state.screenWidth !== document.body.clientWidth) {
+            this.selfRef.current.style.display = 'none';
+            this.setState({openMenuActive: false});
+        }
 }
 
     routeMenu (nameOfClass, onclick) {
         return (
         <ul className={nameOfClass}>
-            <li onClick={onclick}><Link to='/' >Главная</Link></li>
-            <li onClick={onclick}><Link to='/songs'>Песни</Link></li>
-            <li onClick={onclick}><Link to='/video'>Видео</Link></li>
-            <li onClick={onclick}><Link to='/sale'>Мерч</Link></li>
-            <li onClick={onclick}><Link to='/contacts'>Контакты</Link></li>
+            <li><Link onClick={onclick} to='/' >Главная</Link></li>
+            <li><Link onClick={onclick} to='/songs'>Песни</Link></li>
+            <li><Link onClick={onclick} to='/video' >Видео</Link></li>
+            <li><Link onClick={onclick} to='/sale'>Мерч</Link></li>
+            <li><Link onClick={onclick} to='/contacts'>Контакты</Link></li>
         </ul>
         )}
 

@@ -150,8 +150,11 @@ body {
         }
     }
 
-    .general, .contacts, .sale, .songs, .video {
+    .general, .contacts, .sale {
         padding-top: 40px;
+    }
+    .songs, .video {
+        padding-top: 55px;
     }
 }
 
